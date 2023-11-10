@@ -5,6 +5,7 @@ performance? If you can, check performance with nvprof or nvvp.
 To perform Matrix addition with unified memory and check its performance with nvprof.
 
 ## Procedure:
+
 Step 1 : Include the required files and library.
 
 Step 2 : Introduce a function named "initialData","sumMatrixOnHost","checkResult" to return the initialize the data , perform matrix summation on the host and then check the result.
@@ -16,6 +17,7 @@ Step 4 : Declare the main function. In the main function set up the device & dat
 Step 5 : Execute the program and run the terminal . Check the performance using nvprof.
 
 ## Program:
+
 Developed by : ANTO JESSI A
 Reg.NO: 212222040009
 #include <stdio.h>
