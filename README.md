@@ -89,6 +89,7 @@ int main()
         a[i] = rand() * 1000;
         b[i] = rand() * 1000;
     }
+    
     int* d_a, * d_b, * d_c;
     cudaMalloc(&d_a, sizeof(int) * 100);
     cudaMalloc(&d_b, sizeof(int) * 100);
@@ -106,11 +107,12 @@ int main()
     cudaAdd << <grid, block >> > (d_a, d_b, d_c, 100);
     cudaEventRecord(end);
     cudaEventSynchronize(end);
-    float elapsed;
+    float elapsed; 
     cudaEventElapsedTime(&elapsed, start, end);
     cudaMemcpy(c, d_c, sizeof(int) * 100, cudaMemcpyDeviceToHost);
     printf("The kernel ran for %.2f milliseconds.\n", elapsed);
-    for (int i = 0; i < 100; i++) {
+    for (int i = 0; i < 100; i++) 
+    {
         printf("%d ", c[i]);
     }
     printf("\n");
