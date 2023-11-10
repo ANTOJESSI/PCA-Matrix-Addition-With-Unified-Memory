@@ -68,6 +68,7 @@ int main() {
     cudaEventDestroy(end);
     return 0;
 }
+
 without memset:-
 
 #include <stdio.h>
@@ -78,10 +79,13 @@ __global__ void cudaAdd(int* a, int* b, int* c, const int N) {
         c[i] = a[i] + b[i];
     }
 }
-int main() {
+
+int main()
+{
     srand(time(0));
     int a[100], b[100], c[100];
-    for (int i = 0; i < 100; i++) {
+    for (int i = 0; i < 100; i++)
+    {
         a[i] = rand() * 1000;
         b[i] = rand() * 1000;
     }
