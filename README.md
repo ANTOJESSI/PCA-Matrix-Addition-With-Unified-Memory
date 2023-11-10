@@ -35,6 +35,7 @@ int main() {
         a[i] = rand() * 1000;
         b[i] = rand() * 1000;
     }
+    
     int* d_a, * d_b, * d_c;
     cudaMalloc(&d_a, sizeof(int) * 100);
     cudaMalloc(&d_b, sizeof(int) * 100);
