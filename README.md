@@ -73,7 +73,8 @@ without memset:-
 
 #include <stdio.h>
 #include <cuda.h>
-__global__ void cudaAdd(int* a, int* b, int* c, const int N) {
+__global__ void cudaAdd(int* a, int* b, int* c, const int N) 
+{
     int i = blockIdx.x * blockDim.x + threadIdx.x;
     if (i < N) {
         c[i] = a[i] + b[i];
